@@ -1,5 +1,14 @@
 <%- include("partials/header.ejs") %>
-    
-<h1>Hello</h1>
+
+<form action="/" method="post">
+    <label for="ticker">Enter Ticker:</label><br>
+    <input type="text" name="ticker" value="BTC-USD">
+    <button type="submit">Submit</button>
+</form>
+
+<% if (locals.data) { %>
+    <pre><%= data %></pre>
+<% } %>
+
 
 <%- include("partials/footer.ejs") %>
